@@ -1,0 +1,39 @@
+import random
+
+#Fase de eleccion
+
+user = raw_input('Bienvenido a Pokemon Py! \n Elige a Charmander, Squirtle o Bulbasaur: ')
+pc = random.choice(["Totodile","Chikorita","Cyndaquil"])
+
+#Fase de ataque
+
+print "Elegiste a {} y la PC eligio a {}, ambos tienen 200 puntos de vida. A pelear!".format(user, pc)
+print "\n"
+
+user_life = 200
+pc_life = 200
+
+def attack(target):
+  if target == user:
+    global user_life
+    user_life -= 200
+    print "Perdiste!"
+    
+  elif target == pc:
+    global pc_life
+    pc_life -= 200
+    print "Ganaste!"
+
+attack(pc)
+
+
+#if user == "Charmander":
+  #print ataques_char
+#elif user == "Squirtle":
+  #print ataques_squir
+#elif user == "Bulbasaur":
+  #print ataques_bulba
+
+#ataques = ['charmander': llamarada, 'squirtle':chorro de agua, 'bulbasaur': latigo cepa]
+
+#Fin del juego
