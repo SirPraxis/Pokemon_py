@@ -33,12 +33,14 @@ time.sleep(1)
 #Funciones de ataque:
 
 def turnoOponente():
-    sel = "a"
+    sel = random.randint(1, 2, 3)
     time.sleep(1)
-    if sel == 'a':
+    if sel == 1:
         Pikachu.hp -= Oponente.atk
         print ("¡%s ha contraatacado!" % pokemonsalvaje.capitalize())
         time.sleep(1)
+    elif sel == 2:
+        print ("%s se distrajo con una ardilla que pasaba por ahí..." % pokemonsalvaje.capitalize())
     else:
         print ("%s se sentó en el suelo a esperar algo..." % pokemonsalvaje.capitalize())
     print ("_____________________________")
@@ -51,7 +53,7 @@ def turnoPikachu():
         print ("¡El ataque ha surtido efecto!")
         time.sleep(1)
     else:
-        print ("Tu Pikachu se sentó en el suelo a esperar algo...")
+        print ("Tu Pikachu se sentó en el suelo a esperar...")
     print ("_____________________________")
 
 #Bloque de fases:
@@ -63,7 +65,7 @@ while Oponente.hp > 0:
         print ("Pikachu (HP: " + str(Pikachu.hp) + ") / %s (HP: " % pokemonsalvaje.capitalize() + str(Oponente.hp) + ")\n")
         turnoOponente()
         if Pikachu.hp <= 0:
-            print ("Pikachu se ha desmayado. \n---GG.\n")
+            print ("¡Pikachu se ha desmayado :( ! \n---GG.\n")
             break
     else:
-        print ("K.O.! %s se ha desmayado\n" % pokemonsalvaje.capitalize())
+        print ("K.O.! %s se ha desmayado!\n" % pokemonsalvaje.capitalize())
