@@ -1,4 +1,4 @@
-#Definición de reqursos:
+#Definición de recursos:
 
 import requests
 import random
